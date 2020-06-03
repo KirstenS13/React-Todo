@@ -1,8 +1,9 @@
 import React from 'react';
 
 const Todo = props => {
+    //render title of todo item
     return (
-        <p>Todo Item</p>
+        <p>Todo Item Title</p>
     )
 }
 

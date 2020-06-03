@@ -6,9 +6,19 @@ class TodoForm extends React.Component {
         this.state = {};
     }
 
+    //needs text input and two buttons
+
     render() {
         return (
-            <p>Form</p>
+            <form>
+                <label htmlFor='taskInput'>Add Tasks to your List</label>
+                <input 
+                    placeholder='Enter your todo task'
+                    id='taskInput'
+                />
+                <button>Add Task</button>
+                <button>Clear Completed Tasks</button>
+            </form>
         )
     }
 }
