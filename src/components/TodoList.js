@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-import Todo from './components/Todo';
+import Todo from './Todo';
 
 //map over array
 
@@ -11,7 +11,11 @@ const TodoList = props => {
     return (
         <div>
             <p>List of Todo Items</p>
-            <Todo />
+            {props.todos.map(todo => {
+                return (
+                    <Todo key={todo.id} todo={todo} toggleCompleted={props.toggleCompleted}/>
+                )
+            })}
         </div>
     )
 }

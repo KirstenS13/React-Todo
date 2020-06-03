@@ -3,7 +3,9 @@ import React from 'react';
 const Todo = props => {
     //render title of todo item
     return (
-        <p>Todo Item Title</p>
+        <div onClick={() => props.toggleCompleted(props.todo.id)}>
+            <p>{props.todo.task}</p>
+        </div>
     )
 }
 
