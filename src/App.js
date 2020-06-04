@@ -4,6 +4,24 @@ import TodoForm from './components/TodoForm';
 //only import TodoList because Todo is rendered from TodoList
 import TodoList from './components/TodoList';
 
+import styled from 'styled-components';
+
+const AppContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: auto;
+  font-family: Gill Sans, sans-serif;
+  color: indigo;
+`
+
+const H2 = styled.h2`
+  font-size: 2rem;
+  font-weight: normal;
+`
+
 //test data
 /* const todos = [
   {
@@ -69,11 +87,11 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <h2>Welcome to your Todo App!</h2>
+      <AppContainer>
+        <H2>Welcome!</H2>
         <TodoForm addTodo={this.addTodo} clearCompleted={this.clearCompleted}/>
         <TodoList todos={this.state.todos} toggleCompleted={this.toggleCompleted}/>
-      </div>
+      </AppContainer>
     );
   }
 }
